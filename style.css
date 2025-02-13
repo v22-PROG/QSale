@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/*
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: linear-gradient(to right, #7000D1,#cb8fff00, transparent), 
+                url(images/fondo7.jpg);
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex; /* Para mantener la alineación si hay otros elementos */
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px; /* Ajusta el tamaño del logo según necesites */
+    width: auto;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #266371;
+
+}
+
+.icons {
+    display: flex;
+}
+
+.icons i {
+    font-size: 25px;
+    color: #ffffff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #266371;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-txt {
+    width: 40%;
+}
+
+.header-txt h1 {
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra negra difusa */
+}
+
+.header-txt p {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra negra difusa */
+}
+
+.header-txt h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra negra difusa */
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #099fa6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
+    
+    
+}
+.btn-2 {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #099fa6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
+    margin: 20px;
+}
+
+.btn-1:hover {
+    background-color: #02cffd;
+}
+
+.btn-2:hover {
+    background-color: #02cffd;
+}
+
+.header-txt h5 {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 200;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra negra difusa */
+}
+
+.images {
+    width: 800px;
+    height: 380px;
+    position: absolute;
+    right: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-slide h3 {
+    position: absolute;
+    left: 50;
+    bottom: 20px;
+    color: #ffffff;
+    font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra negra difusa */
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.rows {
+    width: 180px;
+    position: absolute;
+    right: 310px;
+    bottom: 150px;
+}
+
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Evita que interfiera con los clics */
+    z-index: 9999; /* Asegura que esté sobre todo */
+}
+
+
+
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 80%;
+        left: 0;
+        right: 0;
+        background-color: #3f3f3f48;
+        backdrop-filter: blur(5px);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .icons {
+        display: none;
+    }
+
+    .header {
+        padding: 40px 30px 50px 30px;
+        align-items: self-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-txt {
+        text-align: center;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    .header-txt h1 {
+        text-align: center;
+        width: 100%; /* Reduce un poco el ancho para que no llegue a los bordes */
+        font-size: clamp(25px, 1vw, 25px); /* Ajusta el tamaño del texto dinámicamente */
+    }
+    
+    .header-txt h2 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .images {
+        position: initial;
+        width: 300px;
+        height: 400px;
+    }
+
+    .rows {
+        display: none;
+    }
+
+
+}

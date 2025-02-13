@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSale</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="menu container">
+
+            <a href="#" class="logo">
+                <img src="images/celeste.png" alt="Logo" class="logo-img">
+            </a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Reservaciones</a></li>
+                    <li><a href="#">Contactos</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="https://www.facebook.com/profile.php?id=61569848640449" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/q.saleee/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@qsalepe" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a> 
+                <a href="https://www.youtube.com/@qsalepe" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>¡No te quedes en Casa!</h1>
+                <p>
+                    ¿Estás en Cajamarca y no sabes a donde ir? Tenemos los mejores planes para ti, aquí encontrarás lugares que puedes conocer, los mejores points, lugares donde podrás divertirte y hospedajes donde pasarás la mejor experiencia.
+                </p>
+                <h2>Descarga ahora</h2>
+                <a href="instaladores/app-release.apk" class="btn-1">Descarga Android</a> 
+                <a href="instaladores/app-release.apk" class="btn-2">Descarga Ios</a>
+                <h5> *No te preocupes esta aplicación no contiene virus y tampoco robaremos tu información.*</h5>
+            </div>
+        </div>
+
+        <div class="images">
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/1.jpg" alt="">
+                        <h3>Visita</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/2.jpg" alt="">
+                        <h3>Point</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/3.jpg" alt="">
+                        <h3>Diviértete</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/4.jpg" alt="">
+                        <h3>Baila</h3>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/5.jpg" alt="">
+                        <h3>Descansa</h3>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+    </header>
+
+    
+    <canvas id="confetti-canvas"></canvas>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" ></script>
+</body>
+</html>
