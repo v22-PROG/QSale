@@ -16,10 +16,17 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #7000D1, #cb8fff00, transparent), 
+                url(images/fondo7.jpg);
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* 🔹 Fija la imagen al fondo */
 }
 
 .container {
@@ -28,11 +35,6 @@ body {
 }
 
 .header {
-    background: linear-gradient(to right, #7000D1,#cb8fff00, transparent), 
-                url(images/fondo7.jpg);
-    background-position: center center; 
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     position: relative;
     min-height: 100vh;
@@ -41,7 +43,7 @@ body {
 
 
 .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -98,7 +100,7 @@ body {
 }
 
 .menu-icono {
-    width: 25px;
+    width: 5px;
 }
 
 .menu label {
@@ -107,7 +109,8 @@ body {
 }
 
 .header-txt {
-    width: 40%;
+    width: 43%;
+    margin-bottom: 20px;
 }
 
 .header-txt h1 {
@@ -116,7 +119,8 @@ body {
     font-weight: 900;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: 15px;
+    padding-top: 60px;
+   
     font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra negra difusa */
 }
@@ -125,15 +129,19 @@ body {
     font-size: 18px;
     color: #ffffff;
     font-weight: 500;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra negra difusa */
 }
 
 .header-txt h2 {
-    font-size: 30px;
+    font-size: 27px;
     line-height: 30px;
     font-weight: 700;
     text-align: left;
+    padding-bottom: -5px;
+
     text-transform: uppercase;
     color: #ffffff;
     font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
@@ -144,9 +152,10 @@ body {
     display: inline-block;
     padding: 13px 20px;
     border-radius: 25px;
+    font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
-    background-color: #099fa6;
+    background-color: #02cffd;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
     
@@ -156,26 +165,72 @@ body {
     display: inline-block;
     padding: 13px 20px;
     border-radius: 25px;
+    font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
-    background-color: #099fa6;
+    background-color: #02cffd;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     font-family: "Open Sans", serif; /*font-family: "Open Sans", serif;*/
     margin: 20px;
 }
 
 .btn-1:hover {
-    background-color: #02cffd;
+    background-color: #099fa6;
 }
 
 .btn-2:hover {
-    background-color: #02cffd;
+    background-color: #099fa6;
 }
 
+/* Contador de clicks*/
+
+/* Contenedor del contador */
+.contador-box {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #7000D1; /* Color de fondo */
+    padding: 15px 15px;
+    border-radius: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+/* Efecto cuando el número cambia */
+.contador-box span {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto cuando el número cambia */
+.aumentar {
+    animation: aumentarEscala 0.3s ease-in-out;
+}
+
+/* Animación de escala */
+@keyframes aumentarEscala {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Contador de clicks*/
+
+
 .header-txt h5 {
-    font-size: 15px;
+    font-size: 17px;
     color: #ffffff;
     font-weight: 200;
+    padding-top: 5px;
     margin-bottom: 15px;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra negra difusa */
 }
@@ -226,6 +281,7 @@ body {
 }
 
 
+
 #confetti-canvas {
     position: fixed;
     top: 0;
@@ -239,8 +295,11 @@ body {
 
 
 @media(max-width:991px) {
+    
+
     .menu {
-        padding: 30px;
+        padding: 30px 30px 1px 30px;
+        
 
     }
 
@@ -270,7 +329,8 @@ body {
     }
 
     .header {
-        padding: 40px 30px 50px 30px;
+        padding: 5px 30px 50px 30px;
+        
         align-items: self-start;
         flex-direction: column;
         align-items: center;
@@ -280,11 +340,13 @@ body {
         text-align: center;
         width: 100%;
         margin-top: 5px;
-        margin-bottom: 15px;
+        margin-bottom: -5px;
     }
 
     .header-txt h1 {
         text-align: center;
+        margin-bottom: -30px;
+        
         width: 100%; /* Reduce un poco el ancho para que no llegue a los bordes */
         font-size: clamp(25px, 1vw, 25px); /* Ajusta el tamaño del texto dinámicamente */
     }
@@ -292,7 +354,16 @@ body {
     .header-txt h2 {
         text-align: center;
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+        
+    }
+    .contador-box {
+        text-align: center;
+        font-size: 80%;
+        padding: 3%;
+        width: 100%;
+        margin-bottom: 5px;
     }
 
     .images {
