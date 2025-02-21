@@ -17,7 +17,7 @@
         <div class="menu container">
 
             <a href="#" class="logo">
-                <img src="images/celeste.png" alt="Logo" class="logo-img">
+                <img src="images/ISOLOGO (BLANCO)_QSALE.png" alt="Logo" class="logo-img">
             </a>
             <input type="checkbox" id="menu" />
             <label for="menu">
@@ -25,10 +25,9 @@
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Reservaciones</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="descubre.html">Descubre</a></li>
+                    <li><a href="#">Nosotros</a></li>
                     <li><a href="#">Contactos</a></li>
                 </ul>
             </nav>
@@ -59,6 +58,9 @@
                 <h2>Descarga ahora</h2>
                 <a href="instaladores/app-release.apk" class="btn-1">Descarga Android</a> 
                 <a href="instaladores/app-release.apk" class="btn-2">Descarga Ios</a>
+
+                <h6 id="descargas" class="contador-box">+ de <span id="contador">1000</span> han descargado la aplicación</h6>
+
                 <h5> *No te preocupes esta aplicación no contiene virus y tampoco robaremos tu información.*</h5>
             </div>
         </div>
@@ -94,7 +96,25 @@
         </div>
 
         
+
+        
     </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let contador = document.getElementById("contador");
+            let numeroDescargas = 1000; // Número inicial de descargas
+        
+            function aumentarDescargas() {
+                numeroDescargas++; // Incrementa en 1
+                contador.textContent = numeroDescargas;
+            }
+        
+            // Selecciona ambos botones y agrega el evento de clic
+            document.querySelector(".btn-1").addEventListener("click", aumentarDescargas);
+            document.querySelector(".btn-2").addEventListener("click", aumentarDescargas);
+        });
+    </script>
 
     
     <canvas id="confetti-canvas"></canvas>
